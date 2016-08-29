@@ -1,14 +1,18 @@
 package com.example.lghpw_000.myapplication;
 
+import android.app.Service;
+import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
+import android.os.IBinder;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 /**
  * Created by lghpw_000 on 2016/08/28.
  */
-public class SoundLevelMeter implements Runnable {
+public class SoundLevelMeter extends Service implements Runnable {
     private static final int SAMPLE_RATE = 8000;
 
     private int bufferSize;
@@ -35,6 +39,13 @@ public class SoundLevelMeter implements Runnable {
         tempo = 0;
 
     }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+
     public void setListener(SoundLevelMeterListener l) {
         listener = l;
     }
