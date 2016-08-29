@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements SoundLevelMeter.S
                     //soundLevelMeter.interrupt();
                     thread_open=true;
                     Log.d("ストップです","thread="+thread_open);
-                    audio.setStreamVolume(AudioManager.STREAM_MUSIC,6,0);
                     musicVol = audio.getStreamVolume(AudioManager.STREAM_MUSIC);
                     curMusicVolTex.setText(String.valueOf(musicVol));
                 }
@@ -85,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements SoundLevelMeter.S
 
         textView3.setText(String.valueOf(db));
         Log.d("MAです","音量判定");
-        if(db2 > 30.0){
+        if(db2 > 40.0){
             audio.setStreamVolume(AudioManager.STREAM_MUSIC,2,0);
             musicVol = audio.getStreamVolume(AudioManager.STREAM_MUSIC);
             curMusicVolTex.setText(String.valueOf(musicVol));

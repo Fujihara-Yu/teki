@@ -29,19 +29,11 @@ public class SoundLevelMeter implements Runnable {
     private SoundLevelMeterListener listener;
 
     public SoundLevelMeter() {
-        bufferSize = AudioRecord.getMinBufferSize(SAMPLE_RATE,
-                AudioFormat.CHANNEL_CONFIGURATION_MONO,
-                AudioFormat.ENCODING_PCM_16BIT);
-        audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC,
-                SAMPLE_RATE, AudioFormat.CHANNEL_CONFIGURATION_MONO,
-                AudioFormat.ENCODING_PCM_16BIT, bufferSize*2);
 
-        listener = null;
-        isRecording = true;
         baseValue = 12.0;
         test = 0;
         tempo = 0;
-        pause();
+
     }
     public void setListener(SoundLevelMeterListener l) {
         listener = l;
@@ -86,7 +78,7 @@ public class SoundLevelMeter implements Runnable {
                tempo = tempo + 1;
 
                try {
-                   Thread.sleep(700);
+                   Thread.sleep(5000);
                } catch (InterruptedException e) {
                    // TODO Auto-generated catch block
 
@@ -99,7 +91,7 @@ public class SoundLevelMeter implements Runnable {
                    }
 
                });
-                
+
            }
 
            Log.d("audioRecord.stop();の上", "thread" + MainActivity.thread_open);
