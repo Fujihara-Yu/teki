@@ -11,12 +11,13 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="229dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="116dp"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_alignEnd="@+id/linearLayout2"
+        android:id="@+id/linearLayout3">
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,7 +25,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="端末のvol"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/mvol" />
+            android:id="@+id/mvol"
+            android:textSize="35dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,7 +34,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="端末の現在の音量"
             android:id="@+id/crvol"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="35dp" />
 
     </LinearLayout>
 
@@ -77,7 +80,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout2">
 
         <TextView
             android:layout_width="452dp"
@@ -96,6 +100,32 @@
             android:textSize="50dp"
             android:id="@+id/textView2"
             android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/linearLayout3"
+        android:layout_toLeftOf="@+id/linearLayout3"
+        android:layout_toStartOf="@+id/linearLayout3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="端末の最大vol"
+            android:id="@+id/nochange"
+            android:textSize="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="端末の現在の音量"
+            android:id="@+id/nochange1"
+            android:textSize="35dp" />
+
     </LinearLayout>
 
 </RelativeLayout>

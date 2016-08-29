@@ -89,7 +89,7 @@ public class SoundLevelMeter extends Service implements Runnable {
                tempo = tempo + 1;
 
                try {
-                   Thread.sleep(5000);
+                   Thread.sleep(1000);
                } catch (InterruptedException e) {
                    // TODO Auto-generated catch block
 

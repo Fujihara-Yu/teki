@@ -84,12 +84,16 @@ public class MainActivity extends AppCompatActivity implements SoundLevelMeter.S
 
         textView3.setText(String.valueOf(db));
         Log.d("MAです","音量判定");
-        if(db2 > 40.0){
-            audio.setStreamVolume(AudioManager.STREAM_MUSIC,2,0);
+        if(db2 < 30.0){
+            audio.setStreamVolume(AudioManager.STREAM_MUSIC,9,0);
             musicVol = audio.getStreamVolume(AudioManager.STREAM_MUSIC);
             curMusicVolTex.setText(String.valueOf(musicVol));
-        }else {
-            audio.setStreamVolume(AudioManager.STREAM_MUSIC,7,0);
+        }else if(db2<35.0){
+            audio.setStreamVolume(AudioManager.STREAM_MUSIC,6,0);
+            musicVol = audio.getStreamVolume(AudioManager.STREAM_MUSIC);
+            curMusicVolTex.setText(String.valueOf(musicVol));
+        }else{
+            audio.setStreamVolume(AudioManager.STREAM_MUSIC,3,0);
             musicVol = audio.getStreamVolume(AudioManager.STREAM_MUSIC);
             curMusicVolTex.setText(String.valueOf(musicVol));
         }
