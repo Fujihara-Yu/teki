@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="端末のvol"
+            android:text="端末の音量"
             android:layout_gravity="center_horizontal"
             android:id="@+id/mvol"
             android:textSize="35dp" />
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="端末の現在の音量"
+            android:text="調整した音量"
             android:id="@+id/crvol"
             android:layout_gravity="center_horizontal"
             android:textSize="35dp" />
@@ -114,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="端末の最大vol"
+            android:text="端末の音量"
             android:id="@+id/nochange"
             android:textSize="35dp" />
 
@@ -122,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="端末の現在の音量"
+            android:text="調整した音量"
             android:id="@+id/nochange1"
             android:textSize="35dp" />
 
